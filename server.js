@@ -1,11 +1,11 @@
 import express from 'express'
 import mongoose from 'mongoose'
-require('dotenv').config();
+import dotenv from 'dotenv';
 import { urlShort, getOriginalUrl } from "./Controllers/url.js";
-
+dotenv.config();
 
 const app = express();
-const port = process.env.PORT;
+const port =process.env.PORT || 3001
 
 app.use(express.urlencoded({extended:true}))
 
